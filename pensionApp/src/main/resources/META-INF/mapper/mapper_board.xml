@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC  
+ "-//mybatis.org//DTD Mapper 3.0//EN"  
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+ 
+<mapper namespace="board">
+	<insert id="insertBoard" parameterType="map">
+	INSERT INTO smartlyceum_db.board
+(title, contents, reg_id, reg_dt, p_seq, `level`)
+VALUES(#{title}, #{contents}, #{reg_id}, current_timestamp, null, 1);
+	
+	
+	</insert>
+
+
+</mapper>
+ 
+ 
+ 

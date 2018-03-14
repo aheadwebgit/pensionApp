@@ -1,0 +1,87 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  font-family:'Noto Sans KR', sans-serif;
+}
+
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 60px 15px 0;
+}
+
+
+code {
+  font-size: 80%;
+}
+
+/* img */
+.carousel-item {
+    width: 100%; /*slider width*/
+    /*max-height: 480px; slider height*/
+}
+.carousel .item img {
+    width: 100%; /*img width*/
+}
+
+
+/* align */
+.align-center{
+	text-align:center;
+}
+
+.align-right{
+	text-align:right;
+}
+
+/* margin */
+.margin-top-10{
+	margin-top:10px;
+}
+
+.margin-bottom-10{
+	margin-bottom:10px;
+}
+
+
+.d-block w-100{
+	width:100px;
+	height:100px;
+}
+
+
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+
+ul.social-buttons li a {
+  font-size: 20px;
+  line-height: 40px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: white;
+  border-radius: 100%;
+  outline: none;
+  background-color: #212529;
+}
+
+ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+  background-color: #fed136;
+}
+
