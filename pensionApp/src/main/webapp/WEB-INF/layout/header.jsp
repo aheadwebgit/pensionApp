@@ -7,17 +7,31 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-lg-12">
-		<ol class="breadcrumb pull-right" style="margin:0px;">
-	  	<li class="breadcrumb-item  padding-top-5"><a href="<c:url value="/"/>">Home</a></li>
-		<li class="breadcrumb-item  padding-top-5 active"><a href="<c:url value="/${menuId}/"/>">${menuId }</a></li>
-	</ol>
+		<div class="col-lg-6">
+			
+		</div>
+		
+		<div class="col-lg-6">
+			<ol class="breadcrumb pull-right" style="margin:0px;">
+			  	<li class="breadcrumb-item padding-top-5">
+			  		<a href="<c:url value="/"/>"><i class="fas fa-home"></i></a>
+				</li>
+			  	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
+		       		<c:if test="${menuId == menuItem.menuId }">
+		       			<li class="breadcrumb-item  padding-top-5 active">${menuItem.menuEngNm }</li> 
+		       		</c:if>     	
+		       	</c:forEach>	 
+			</ol>
 		</div>
 	</div>
 	
 	<div class="jumbotron" >
 	  <div class="container">
-	    <h1>About</h1> 
+	  	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
+       		<c:if test="${menuId == menuItem.menuId }">
+       			<h1>${menuItem.menuEngNm }</h1> 
+       		</c:if>     	
+       	</c:forEach>	   
 	    <p>Bootstrap is the most popular HTML, CSS...</p> 
 	  </div>
 	</div>

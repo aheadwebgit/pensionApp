@@ -15,9 +15,10 @@
 	
 </script>
 <form name="commonForm" method="post">
-	<input type="text" name="menuId" id="menuId" value="${menuId }" />
+	<input type="hidden" name="menuId" id="menuId" value="${menuId }" />
 </form>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark "><!-- mb-4 -->
+	<div class="container">
 	<!-- Brand/logo -->
   	<a class="navbar-brand" href="<c:url value="/" />">Logo</a>
   	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,22 +26,14 @@
     </button>
   	<div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-        	<li class="nav-item "><!-- active -->
-        		<a class="nav-link <c:if test="${menuId == 'about' }">active</c:if>" href="javascript:gfn_goMenu('about','<c:url value="/about/" />');">펜션소개<span class="sr-only">(current)</span></a>
-		    </li>
-		    <li class="nav-item">
-				<a class="nav-link <c:if test="${menuId == 'room' }">active</c:if>" href="javascript:gfn_goMenu('room','<c:url value="/room/" />');">객실안내</a>
-		    </li>
-		    <li class="nav-item">
-				<a class="nav-link <c:if test="${menuId == 'facilities' }">active</c:if>" href="javascript:gfn_goMenu('facilities','<c:url value="/facilities/" />');">부대시설 및 이벤트</a>
-		    </li>
-		    <li class="nav-item">
-				<a class="nav-link <c:if test="${menuId == 'reservation' }">active</c:if>" href="javascript:gfn_goMenu('reservation','<c:url value="/reservation/" />');">예약안내</a>
-		    </li>
-		    <li class="nav-item">
-				<a class="nav-link <c:if test="${menuId == 'community' }">active</c:if>" href="javascript:gfn_goMenu('community','<c:url value="/community/" />');">커뮤니티</a>
-		    </li>
+        	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
+        		<li class="nav-item <c:if test="${menuId == menuItem.menuId }">active</c:if>">
+        			<a class="nav-link" href="javascript:gfn_goMenu('${menuItem.menuId}','<c:url value="${menuItem.menuUrl }"/>');">${menuItem.menuNm }
+        			<span class="sr-only">(current)</span></a>
+        		</li>        	
+        	</c:forEach>
         </ul>
+    </div>
     </div>
 </nav>
 
