@@ -13,10 +13,12 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
 <link rel="stylesheet" href="<c:url value="/resources/font-awesome/css/font-awesome.min.css"/>" type="text/css">
 <link rel="stylesheet" href="<c:url value="/resources/css/aheadweb.css" />" crossorigin="anonymous">
+<link rel="stylesheet" href="<c:url value="/resources/css/agency.css" />" crossorigin="anonymous">
 <link rel="stylesheet" href="<c:url value="/resources/css/sticky.css" />" crossorigin="anonymous">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4601e86c2c90c96b8a11691e405947e2" type="text/javascript" ></script>
 <title>Insert title here</title>
 </head>
 <body>

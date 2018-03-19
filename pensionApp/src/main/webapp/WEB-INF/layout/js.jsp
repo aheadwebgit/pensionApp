@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
+
+<%-- 
 <!-- jQuery 2.2.3 -->
 <script src="<c:url value="/js/plugins_adminLTE/jQuery/jquery-2.2.3.min.js" />"></script>
 <!-- jQuery UI 1.11.4 -->
@@ -116,7 +119,7 @@
 
 <!-- vuejs, axios -->
 <script type="text/javascript" src="<c:url value="/js/plugins/vue.js" />"></script>
-<script type="text/javascript" src="<c:url value="/js/plugins/axios.min.js" />"></script>
+<script type="text/javascript" src="<c:url value="/js/plugins/axios.min.js" />"></script> --%>
 
 <script type="text/javascript">
 $(document).ready(function(){

@@ -25,7 +25,10 @@
 		</div>
 	</div>
 	
-	<div class="jumbotron" >
+	
+</div>
+
+<div class="jumbotron jumbotron-fluid">
 	  <div class="container">
 	  	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
        		<c:if test="${menuId == menuItem.menuId }">
@@ -35,8 +38,5 @@
 	    <p>Bootstrap is the most popular HTML, CSS...</p> 
 	  </div>
 	</div>
-</div>
-
-
 
 
