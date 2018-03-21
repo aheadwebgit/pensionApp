@@ -1,6 +1,8 @@
 /* Sticky footer styles
 -------------------------------------------------- */
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
 
 html {
   position: relative;
@@ -46,6 +48,10 @@ code {
 }
 
 /* margin */
+.margin-top-5{
+	margin-top:5px;
+}
+
 .margin-top-10{
 	margin-top:10px;
 }
@@ -77,10 +83,11 @@ code {
 	style="background-image:url('')"
 */
 .jumbotron{
-	background-image:url('../../resources/img/img_jumbotron.jpg');
-	max-width:1200;
+	background-image:url('../../resources/img/jumbotron_main.jpg');
+	max-width:1920;
 	/*opacity: 0.6;*/
-	background-size: 100% auto;
+	min-height:500;
+	background-size: 100%;
 	
 }
 .jumbotron h1{
@@ -94,6 +101,9 @@ code {
 	
 	
 }
+
+
+
 
 
 ul.social-buttons {
@@ -151,4 +161,28 @@ media
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+
+
+/*
+sub page
+*/
+.font-penscript-18{
+	font-family: 'Nanum Pen Script', serif;
+	font-size:18pt;
+	
+}
+
+.font-brushscript-20{
+	font-family: 'Nanum Brush Script', serif;
+	font-size:20pt;
+	
+}
+
+.font-brushscript-24{
+	font-family: 'Nanum Brush Script', serif;
+	font-size:24pt;
+	
+}
+
 

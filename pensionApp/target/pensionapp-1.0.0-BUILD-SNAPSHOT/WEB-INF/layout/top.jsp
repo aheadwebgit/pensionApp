@@ -4,6 +4,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
+
+
 <script type="text/javascript">
 	function gfn_goMenu(menuId, url){
 		var frm = document.commonForm;
@@ -28,7 +30,7 @@
         <ul class="navbar-nav mr-auto">
         	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
         		<li class="nav-item <c:if test="${menuId == menuItem.menuId }">active</c:if>">
-        			<a class="nav-link" href="javascript:gfn_goMenu('${menuItem.menuId}','<c:url value="${menuItem.menuUrl }"/>');">${menuItem.menuNm }
+        			<a class="nav-link" href="javascript:gfn_goMenu('${menuItem.menuId}','<c:url value="${menuItem.menuUrl }"/>');">${menuItem.menuEngNm }
         			<span class="sr-only">(current)</span></a>
         		</li>        	
         	</c:forEach>

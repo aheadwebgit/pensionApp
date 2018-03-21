@@ -17,7 +17,7 @@
 	
 </script>
 <form name="commonForm" method="post">
-	<input type="hidden" name="menuId" id="menuId" value="${menuId }" />
+	<input type="text" name="menuId" id="menuId" value="${menuId }" />
 </form>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark "><!-- mb-4 -->
 	<div class="container">
@@ -29,10 +29,12 @@
   	<div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
         	<c:forEach items="${menuList }" var="menuItem" varStatus="status">
+        		<c:if test="${menuItem.menuYn == 'Y' }">
         		<li class="nav-item <c:if test="${menuId == menuItem.menuId }">active</c:if>">
         			<a class="nav-link" href="javascript:gfn_goMenu('${menuItem.menuId}','<c:url value="${menuItem.menuUrl }"/>');">${menuItem.menuEngNm }
         			<span class="sr-only">(current)</span></a>
-        		</li>        	
+        		</li>        
+        		</c:if>	
         	</c:forEach>
         </ul>
     </div>

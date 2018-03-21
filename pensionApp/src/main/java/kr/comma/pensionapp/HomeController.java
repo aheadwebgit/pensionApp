@@ -39,6 +39,7 @@ public class HomeController {
 			dsMap.put("menuNm", "펜션소개");
 			dsMap.put("menuEngNm", "About");
 			dsMap.put("menuUrl", "/about/");
+			dsMap.put("menuYn", "Y");
 			dsMenuList.add(dsMap);
 			
 			dsMap = new HashMap<String,Object>();
@@ -46,6 +47,15 @@ public class HomeController {
 			dsMap.put("menuNm", "객실안내");
 			dsMap.put("menuEngNm", "Room");
 			dsMap.put("menuUrl", "/room/");
+			dsMap.put("menuYn", "Y");
+			dsMenuList.add(dsMap);
+			
+			dsMap = new HashMap<String,Object>();
+			dsMap.put("menuId", "02010000");
+			dsMap.put("menuNm", "객실상세");
+			dsMap.put("menuEngNm", "Room View");
+			dsMap.put("menuUrl", "/room/view/");
+			dsMap.put("menuYn", "N");
 			dsMenuList.add(dsMap);
 			
 			dsMap = new HashMap<String,Object>();
@@ -53,6 +63,7 @@ public class HomeController {
 			dsMap.put("menuNm", "부대시설 및 이벤트");
 			dsMap.put("menuEngNm", "Facilities & Event");
 			dsMap.put("menuUrl", "/facilities/");
+			dsMap.put("menuYn", "Y");
 			dsMenuList.add(dsMap);
 			
 			dsMap = new HashMap<String,Object>();
@@ -60,6 +71,7 @@ public class HomeController {
 			dsMap.put("menuNm", "예약안내");
 			dsMap.put("menuEngNm", "Reservation");
 			dsMap.put("menuUrl", "/reservation/");
+			dsMap.put("menuYn", "Y");
 			dsMenuList.add(dsMap);
 			
 			dsMap = new HashMap<String,Object>();
@@ -67,6 +79,7 @@ public class HomeController {
 			dsMap.put("menuNm", "커뮤니티");
 			dsMap.put("menuEngNm", "Community");
 			dsMap.put("menuUrl", "/community/");
+			dsMap.put("menuYn", "Y");
 			dsMenuList.add(dsMap);
 			
 			request.getSession().setAttribute("menuList", dsMenuList);
@@ -82,6 +95,11 @@ public class HomeController {
 	@RequestMapping(value = "/room")
 	public String room(Locale locale, Model model) {
 		return "/room/index";
+	}
+	
+	@RequestMapping(value = "/room/view")
+	public String roomView(Locale locale, Model model) {
+		return "/room/view";
 	}
 	
 	@RequestMapping(value = "/facilities")
